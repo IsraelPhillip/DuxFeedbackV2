@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Duxbank brand gold */
+    --gold: #FFD700;
+    --gold-dark: #CCA800;
+
+    /* Light mode colours (HSL for Tailwind compatibility) */
+    --background: 50 50% 99%;
+    --foreground: 0 0% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 12%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 48 20% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 48 80% 95%;
+    --accent-foreground: 0 0% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 99%;
+
+    --border: 45 20% 90%;
+    --input: 45 15% 92%;
+    --ring: 51 100% 50%;
+
+    --chart-1: 51 100% 50%;
+    --chart-2: 0 0% 15%;
+    --chart-3: 35 60% 55%;
+    --chart-4: 145 50% 55%;
+    --chart-5: 10 65% 50%;
+
+    --sidebar: 0 0% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 51 100% 50%;
+    --sidebar-primary-foreground: 0 0% 12%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 25%;
+    --sidebar-ring: 51 100% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 12%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 48 30% 25%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 99%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 51 100% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Inter", sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .bg-gold-gradient {
+    background-image: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+  }
+
+  .text-gold {
+    color: var(--gold);
+  }
+
+  .bg-gold {
+    background-color: var(--gold);
+  }
+
+  .bg-gold-dark {
+    background-color: var(--gold-dark);
+  }
+
+  .shadow-gold {
+    box-shadow: 0 10px 30px -10px rgba(255, 215, 0, 0.5);
+  }
+
+  .hover\:bg-gold-dark:hover {
+    background-color: var(--gold-dark);
+  }
+
+  .hover\:shadow-gold:hover {
+    box-shadow: 0 10px 30px -10px rgba(255, 215, 0, 0.5);
+  }
+
+  .fill-gold {
+    fill: var(--gold);
+  }
+
+  .border-gold {
+    border-color: var(--gold);
+  }
+
+  .bg-gold\/10 {
+    background-color: rgba(255, 215, 0, 0.1);
+  }
+
+  .bg-gold\/15 {
+    background-color: rgba(255, 215, 0, 0.15);
+  }
+
+  .border-gold\/50 {
+    border-color: rgba(255, 215, 0, 0.5);
+  }
+
+  .min-h-dvh {
+    min-height: 100dvh;
+  }
+}
+
+/* Accordion animations */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
