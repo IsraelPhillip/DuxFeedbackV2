@@ -18,11 +18,6 @@ export function Landing() {
       <header className="border-b sticky top-0 z-30 bg-background/85 backdrop-blur">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <Logo />
-          <Button asChild variant="ghost" size="sm">
-            <Link to="/auth">
-              <LogIn className="h-4 w-4 mr-1" /> Admin Login
-            </Link>
-          </Button>
         </div>
       </header>
 
@@ -94,6 +89,11 @@ export function Landing() {
       <footer className="border-t mt-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted-foreground">
           <Logo />
+          <Button asChild variant="ghost" size="sm">
+            <Link to="/auth">
+              <LogIn className="h-4 w-4 mr-1" /> Admin Login
+            </Link>
+          </Button>
           <p>© {new Date().getFullYear()} Duxbank Microfinance Bank. All rights reserved.</p>
         </div>
       </footer>
