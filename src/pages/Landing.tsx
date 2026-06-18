@@ -90,11 +90,7 @@ export function Landing() {
     QR Code
   </Link>
 </Button>
-          <Button asChild variant="ghost" size="sm">
-            <Link to="/auth">
-              <LogIn className="h-4 w-4 mr-1" /> Admin Login
-            </Link>
-          </Button>
+          
           <p>© {new Date().getFullYear()} Duxbank Microfinance Bank. All rights reserved.</p>
         </div>
       </footer>
