@@ -84,11 +84,12 @@ export function Landing() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted-foreground">
           <Logo />
           
-                <Button asChild size="lg" variant="outline">
-                  <Link to="/qr">
-                    <QrCode className="h-4 w-4 mr-1" /> Download QR Code
-                  </Link>
-                </Button>
+               <Button asChild size="sm" variant="outline">
+  <Link to="/qr">
+    <QrCode className="h-3 w-3 mr-1" />
+    QR Code
+  </Link>
+</Button>
           <Button asChild variant="ghost" size="sm">
             <Link to="/auth">
               <LogIn className="h-4 w-4 mr-1" /> Admin Login
