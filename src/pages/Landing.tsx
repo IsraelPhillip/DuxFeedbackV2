@@ -40,12 +40,7 @@ export function Landing() {
                 Help us improve our banking services by sharing your experience. Your feedback
                 shapes the future of Duxbank Microfinance.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3 justify-center">
-                <Button asChild size="lg" variant="outline">
-                  <Link to="/qr">
-                    <QrCode className="h-4 w-4 mr-1" /> Download QR Code
-                  </Link>
-                </Button>
+             
               </div>
             </motion.div>
           </div>
@@ -89,6 +84,12 @@ export function Landing() {
       <footer className="border-t mt-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted-foreground">
           <Logo />
+           <div className="mt-8 flex flex-wrap gap-3 justify-center">
+                <Button asChild size="lg" variant="outline">
+                  <Link to="/qr">
+                    <QrCode className="h-4 w-4 mr-1" /> Download QR Code
+                  </Link>
+                </Button>
           <Button asChild variant="ghost" size="sm">
             <Link to="/auth">
               <LogIn className="h-4 w-4 mr-1" /> Admin Login
